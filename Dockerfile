@@ -18,6 +18,6 @@ RUN apt-get install -y tree vim
 # Clean up apt temp files
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Incorporate cargo env
-RUN /bin/bash -c "source ~/.cargo/env"
+# Add cargo to PATH
+ENV PATH="/root/.cargo/bin:${PATH}"
 
