@@ -21,3 +21,6 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Add cargo to PATH
 ENV PATH="/root/.cargo/bin:${PATH}"
 
+WORKDIR /root/
+CMD "/bin/bash"
+
