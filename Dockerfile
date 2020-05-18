@@ -18,3 +18,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Incorporate cargo env
 RUN /bin/bash -c "source ~/.cargo/env"
+
