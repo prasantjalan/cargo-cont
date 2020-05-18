@@ -5,7 +5,7 @@ LABEL maintainer="Prasant Jalan <prasant.jalan@gmail.com>"
 RUN apt-get update
 
 # Install packages required by uplink
-RUN apt -y install curl build-essentials
+RUN apt -y install curl build-essential
 
 # Install cargo
 RUN curl https://sh.rustup.rs -sSf | sh
