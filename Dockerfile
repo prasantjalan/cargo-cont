@@ -8,7 +8,9 @@ RUN apt-get update
 RUN apt -y install curl build-essential
 
 # Install cargo
-RUN curl https://sh.rustup.rs -sSf | sh
+RUN curl https://sh.rustup.rs -sSf > /opt/rustup.sh
+RUN chmod a+x /opt/rustup.sh
+RUN /opt/rustup.sh -y
 
 # Install additional utility packages
 RUN apt-get install -y tree vim
